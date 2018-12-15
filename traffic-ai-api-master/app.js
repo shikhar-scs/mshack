@@ -11,8 +11,13 @@ var carSpottings             = require('./models/carSpottings');
 var User = require('./models/user');
 var stolenCar = require('./models/stolenCar')
 
-mongoose.connect("mongodb://admin:admin123@ds143293.mlab.com:43293/bakhodihacks");
-
+mongoose.connect("mongodb://mshackdatabase.documents.azure.com:10255/?ssl=true&sslverifycertificate=false",
+    {
+        auth: {
+            user: "mshackdatabase",
+            password: "8ioC3ik5JJ3DuAc4CbmuztmsCo5kU9pkST05XXY2Bu9aPGHcZXMT0OG9TRrBYFG7IObuCaoUmsKewzlm2gBd1g=="
+        }
+    })
 
 var app = express();
 app.set('view engine', 'ejs');

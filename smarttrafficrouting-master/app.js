@@ -19,7 +19,13 @@ const express                = require('express'),
 var User = require('./models/user');
 
 //mongoose.connect("mongodb://sanjay:sanjay123@ds251223.mlab.com:51223/sanjayji");
-mongoose.connect("mongodb://admin:admin123@ds143293.mlab.com:43293/bakhodihacks");
+mongoose.connect("mongodb://mshackdatabase.documents.azure.com:10255/?ssl=true&sslverifycertificate=false",
+    {
+        auth: {
+            user: "mshackdatabase",
+            password: "8ioC3ik5JJ3DuAc4CbmuztmsCo5kU9pkST05XXY2Bu9aPGHcZXMT0OG9TRrBYFG7IObuCaoUmsKewzlm2gBd1g=="
+        }
+    })
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -359,7 +365,7 @@ app.get('/seeroutes', function(req, res){
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 3000;
 
 
 app.listen(port, function(){
