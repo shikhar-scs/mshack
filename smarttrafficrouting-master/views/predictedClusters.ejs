@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 900px;  /* The height is 400 pixels */
+            width: 100%;  /* The width is the width of the web page */
+        }
+    </style>
+</head>
+<body>
+<h3>Smart Bins</h3>
+<button onclick="deleteMarkers()">
+    RouteAway
+</button>
+<!--The div element for the map -->
+<div id="map"></div>
+<script>
+    var map;
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var uluru = {lat: -25.344, lng: 131.036};
+        // The map, centered at Uluru
+        map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: {lat: 12.959576, lng: 77.582663}});
+        //document.getElementById('map'), {zoom: 15, center: {lat: 26.96350023974376, lng: 75.88082836887753}});
+        // The marker, positioned at Uluru
+
+    }
+</script>
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script>
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy1rJOXaGB3oKT_Q4x_NYkYVjIYPDdlgI&callback=initMap">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function deleteMarkers(){
+        Markers = window.Markers;
+        for (var i = 0; i < Markers.length; i++) {
+            Markers[i].setMap(null);
+
+        }
+        Markers[i] = [];
+        var counter = 0;
+        var colors = ["#C70039", "#0000FF", "#A0FF00", "#FFC000", "#FF6200", "#000000", "#FFFFFF", "#DAF7A6", "#9689AC", "#145A32", "#784212", "#FF5733", "#229954", "#34495E", "#AAB7B8", "#CD5C5C", "#DC7633", "#D35400", "#D0D3D4", "#2C3E50", "#B2BABB"]
+        data.forEach(function(d, i){
+            Markers[counter] = new google.maps.Marker({position: {lat: Number(d.lat), lng: Number(d.lon)},
+                icon: {
+                    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                    strokeColor: colors[d.cluster],
+                    //strokeColor: '#ADFF2F',
+                    scale: 3
+                }, map: map})
+            counter ++;
+        })
+
+    }
+    $.get("/getClusters", function(datar){
+        window.data = datar;
+        window.Markers = [];
+        var counter = 0;
+        data.forEach(function(d){
+             Markers[counter] = new google.maps.Marker({position: {lat: Number(d.lat), lng: Number(d.lon)},
+                map: map})
+            counter ++;
+        })
+
+        console.log(data);
+    })
+</script>
+</body>
+</html>

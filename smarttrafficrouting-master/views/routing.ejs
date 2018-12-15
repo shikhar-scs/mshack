@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>
+        Routing
+    </title>
+</head>
+<body>
+<input type="text" placeholder="Enter Cluster Number (not implemented)" id="clusterN">
+<button onclick="getPath()">Show path and points</button>
+<p>Currently working for a single cluster, can be easily modified for more. Just Press the button</p>
+<p>The path details can further be shared through API, able to work like a voice assistant as well. Similar to routings in mobile cabs.</p>
+<style>
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 900px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+    }
+</style>
+<div id="map"></div>
+<script>
+    var map;
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: {lat: 12.866505, lng: 77.6913}});
+
+        //var s = 'https://maps.googleapis.com/maps/api/directions/json?origin=26.856023981639915,75.97801240424252&destination=26.832467081091842,75.99291091477959&waypoints=optimize:true|26.856023981639915,75.97801240424252|26.891788148339426,75.99243527283562|26.81363163020587,75.96832410561223|26.80487940445907,75.97769581590752|26.874742735737833,75.97897136724603|26.85739246175021,75.96687662404017|26.842364900507548,75.9986012666823|26.831761948800654,75.99319905912061|26.825089801670565,75.96050519313471|26.86201668910748,75.97025685068098|26.821788032924395,75.97292012196645|26.83177741535627,75.99496475674884|26.875485761035126,75.99676488403888|26.83825566299765,75.99601927952472|26.835025238866287,75.97794462341123|26.88644704287693,75.99432235745566|26.85190987190313,75.97552743284976|26.84013477802134,75.95365953384605|26.806054112110527,75.9793395503959|26.86628160195576,75.99382127878168&key=AIzaSyAy1rJOXaGB3oKT_Q4x_NYkYVjIYPDdlgI'
+        var s = 'https://cors.io/?https://maps.googleapis.com/maps/api/directions/json?origin=12.86249319681674,77.69892334200881&destination=12.86249319681674,77.69892334200881&waypoints=optimize:true|12.86249319681674,77.69892334200881|12.866402971186108,77.68127491241196|12.859022060406742,77.68720513293461|12.846373361159781,77.68927133976715|12.844351124220966,77.66459211860756|12.873616621364064,77.7063959517464|12.877188979422082,77.67643553840249|12.845213679170579,77.70999435689325|12.850866508324232,77.69425824963328|12.856651189147462,77.70886955409709|12.84623473780574,77.6833750988454|12.861306369384591,77.68556585209805|12.873383648275729,77.67112847304661|12.845843747055591,77.66756214847584|12.880071911872735,77.69400444019983|12.863242443928417,77.6817082407168|12.856375479663434,77.69498218416314|12.841764475370944,77.67613888281686|12.84870030004937,77.68660902521923|12.872609309244849,77.70919037471357&key=AIzaSyAy1rJOXaGB3oKT_Q4x_NYkYVjIYPDdlgI'
+
+
+
+        // The marker, positioned at Uluru
+
+    }
+</script>
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script>
+    function getPath(){
+        $.get("/getClusters", function(datar){
+            window.data = datar;
+            window.Markers = [];
+            var counter = 0;
+            data.forEach(function(d, i){
+                if(Number(d.cluster)===3){
+
+                Markers[counter] = new google.maps.Marker({position: {lat: Number(d.lat), lng: Number(d.lon)},
+                    map: map})
+                counter ++;
+                }
+            })
+            var s = 'https://cors.io/?https://maps.googleapis.com/maps/api/directions/json?origin=12.86249319681674,77.69892334200881&destination=12.86249319681674,77.69892334200881&waypoints=optimize:true|12.86249319681674,77.69892334200881|12.866402971186108,77.68127491241196|12.859022060406742,77.68720513293461|12.846373361159781,77.68927133976715|12.844351124220966,77.66459211860756|12.873616621364064,77.7063959517464|12.877188979422082,77.67643553840249|12.845213679170579,77.70999435689325|12.850866508324232,77.69425824963328|12.856651189147462,77.70886955409709|12.84623473780574,77.6833750988454|12.861306369384591,77.68556585209805|12.873383648275729,77.67112847304661|12.845843747055591,77.66756214847584|12.880071911872735,77.69400444019983|12.863242443928417,77.6817082407168|12.856375479663434,77.69498218416314|12.841764475370944,77.67613888281686|12.84870030004937,77.68660902521923|12.872609309244849,77.70919037471357&key=AIzaSyAy1rJOXaGB3oKT_Q4x_NYkYVjIYPDdlgI'
+
+
+            $.get(s, function(data){
+                window.d = (JSON.parse(data));
+                var path = google.maps.geometry.encoding.decodePath(d.routes[0].overview_polyline.points);
+                var flightPath = new google.maps.Polyline({
+                    path: path,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 2
+                });
+                flightPath.setMap(map);
+            })
+
+            console.log(data);
+        })
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAy1rJOXaGB3oKT_Q4x_NYkYVjIYPDdlgI&callback=initMap&libraries=geometry">
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+</script>
+
+</body>
+</html>
