@@ -1,0 +1,41 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: Verdana, sans-serif, Arial;
+    color: #000;
+    margin: 0;
+    font-size: 14px;
+    padding: 0;
+}
+
+#map-container {
+    position: absolute;
+    left: 312px;
+    top: 46px;
+    right: 2px;
+    bottom: 2px;
+    border: 1px solid #cccccc;
+}
+
+#result {
+    position: absolute;
+    left: 2px;
+    top: 46px;
+    width: 306px;
+    bottom: 2px;
+    border: 1px solid #cccccc;
+    background-color: #FAFAFA;
+    overflow: auto;
+    font-family: Verdana, sans-serif, Arial;
+}
+
+button {
+    width: 220px;
+    font-family: Verdana, sans-serif, Arial;
+    font-size: 12px;
+    padding: 2px 0;
+    color: #333
+}

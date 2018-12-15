@@ -1,0 +1,34 @@
+<html>
+<head>
+  <title>Clustering</title>
+
+<link rel="stylesheet" href="https://www.mapmyindia.com/api/MarkerCluster.css" />
+<link rel="stylesheet" href="https://www.mapmyindia.com/api/MarkerCluster.Default.css" />
+
+  <link rel="stylesheet" href="mapClusters.css">
+</head>
+<body>
+<div style="border-bottom: 1px solid #e9e9e9;padding:10px 12px;"><span style="font-size: 20px">MapmyIndia Maps API:</span><span style="font-size:16px;color:#777">Cluster Example</span></div>
+<div id="result">
+  <div style="padding: 16px 12px 6px 38px"><button class="mapmyindia_redraw_cluster">Redraw Cluster</button></div>
+
+  <div style="padding: 6px 12px 6px 38px"><button class="mapmyindia_add_marker" id="marker">Add marker</button></div>
+  <div style="padding: 6px 12px 6px 38px"><button class="mapmyindia_add_markers" id="markers">Add markers</button></div>
+  <div style="padding: 6px 12px 6px 38px"><button class="mapmyindia_clear_cluster">Clear Cluster</button></div>
+  <div style="padding:14px 12px 6px 38px;color: #333;">Event Logs</div>
+  <div style="padding:6px 12px 6px 38px;color: #777; font-size: 12px; line-height: 22px;" id="event-log"></div>
+</div>
+<div id="map-container"></div>
+<div id="map"></div>;
+</body>
+<!--<script src="https://apis.mapmyindia.com/advancedmaps/v1/tk4jxjbdlrh3bg9d3ejn38ooryshz1j5/map_load?v=0.1"></script>-->
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="https://apis.mapmyindia.com/advancedmaps/v1/kmothy62py4dfo2helgh55hvflcql7vh/map_load?v=01."></script>
+
+<script src="mapClusters.js"></script>
+<script src="https://www.mapmyindia.com/api/leaflet.markercluster-src.js"></script>
+
+</html>
