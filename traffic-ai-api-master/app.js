@@ -221,7 +221,6 @@ app.get("/activate/:username", function(req, res){
         Customer.MobVerified = true;
         res.status(200).send(Customer);
 
-
     })
 
 })

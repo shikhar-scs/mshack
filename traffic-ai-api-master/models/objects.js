@@ -14,6 +14,4 @@ module.exports = {
    sofa: "black",
    train: "white",
    Screen: "blue"
-      	
-   
 }
