@@ -178,6 +178,9 @@ $(document).ready(function () {
         $(".mapmyindia_clear_cluster").click(function () {
             clear_cluster();
         });
+        $(".mapmyindia_path").click(function () {
+            window.draw();
+        });
 
         function clear_cluster() {
             map.removeLayer(markerClusters);
@@ -230,7 +233,7 @@ $(document).ready(function () {
             return points
         }
         function drawRand() {
-            for (i = 1; i < 9; i++) {
+            for (i = 1; i < 8; i++) {
                 $.get(`http://apis.mapmyindia.com/advancedmaps/v1/mldh84igi6rmvoasak24zk51rzv1h8g3/route?start=${randCluster[i - 1].lat},${randCluster[i - 1].lon}&destination=${randCluster[i % 8].lat},${randCluster[i % 8].lon}&alternatives=true&with_advices=1`, function (d) {
                     window.plotLine = d;
                     pts = decode(plotLine.results.trips[0].pts);
@@ -245,6 +248,14 @@ $(document).ready(function () {
                     map.addLayer(poly1);
                 });
             }
+        }
+        window.draw = function(){
+            var poly1param = {
+                weight: 4,
+                opacity: 0.5
+            };
+            var poly1 = new L.Polyline(randCluster, poly1param);
+            map.addLayer(poly1);
         }
     };
 });
