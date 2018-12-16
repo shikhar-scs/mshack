@@ -1,9 +1,8 @@
 $(document).ready(function () {
 
-    var map = new MapmyIndia.Map("map", {center: [28.61, 77.23], zoomControl: true, hybrid: true});
+    window.map = new MapmyIndia.Map("map", {center: [28.87, 76.95], zoomControl: false, hybrid: true});
     // var latitudeArr = [28.549948, 28.552232, 28.551748, 28.551738, 28.548602, 28.554603, 28.545639, 28.544339, 28.553196, 28.545842];
     // var longitudeArr = [77.268241, 77.268941, 77.269022, 77.270164, 77.271546, 77.268305, 77.26480, 77.26424, 77.265407, 77.264195];
-    var mark = [];
     var randCluster = [];
     var singlemarker = null;
     var marker_remove = true;
@@ -27,7 +26,7 @@ $(document).ready(function () {
             var map_ne = bounds.getNorthEast();
             var lng_span = map_ne.lng - map_sw.lng;
             var lat_span = map_ne.lat - map_sw.lat;
-            var mark = []
+            window.mark = []
             var markers = []
             // var randClusters = []
             markerClusters = L.markerClusterGroup({
@@ -48,53 +47,54 @@ $(document).ready(function () {
             $.get("http://104.211.202.3:3000/getClusters", (datarr) => {
                 window.data = datarr;
                 window.Markers = [];
-                displayingClusters(datarr)
+                // displayingClusters(datarr)
                 displayingClusterOne(datarr)
-
             })
 
             function displayingClusters(clusterArray) {
                 var event_div = document.getElementById("event-log");
-                debugger
-                for (var i = 0; i < 400; ++i) {
-                    var pt = new L.LatLng(clusterArray[i].lat,clusterArray[i].lon);
-                    var m = new L.marker(pt, {
-                        draggable: true
-                    });
-                    m.bindPopup("marker clicked");
-                    /*events on marker*/
-                    m.on('click', function (a) {
-                        event_div.innerHTML = 'marker is clicked';
-                    });
-                    markers.push(m);
-                }
-                markerClusters.addLayers(markers); //Bulk adding : addLayers is bulk methods for adding markers //
-                map.addLayer(markerClusters); //add marker cluster to map//
+                clear_cluster()
+                setTimeout(function () {
+                    for (var i = 0; i < clusterArray.length; ++i) {
+                        var pt = new L.LatLng(clusterArray[i].lat,clusterArray[i].lon);
+                        var m = new L.marker(pt, {
+                            draggable: true
+                        });
+                        // m.bindPopup("marker clicked");
+                        /*events on marker*/
+                        m.on('click', function (a) {
+                            event_div.innerHTML = 'marker is clicked';
+                        });
+                        markers.push(m);
+                    }
+                    markerClusters.addLayers(markers); //Bulk adding : addLayers is bulk methods for adding markers //
+                    map.addLayer(markerClusters); //add marker cluster to map//
 
-                /*events on marker cluster: clusterclick,mouseover,mouseout*/
-                markerClusters.on('clusterclick', function (a) {
-                    event_div.innerHTML = 'This cluster contains ' + a.layer.getAllChildMarkers().length + ' markers';
-                });
-                /*getAllChildMarkers: Returns the array of total markers contained within that cluster.
-                  getChildCount: Returns the total number of markers contained within that cluster.
-                */
-                markerClusters.on('clustermouseover', function (a) {
-                    event_div.innerHTML = 'This cluster contains ' + a.layer.getAllChildMarkers().length + ' markers; click to view the markers';
-                });
-                return markers
+                    /*events on marker cluster: clusterclick,mouseover,mouseout*/
+                    markerClusters.on('clusterclick', function (a) {
+                        event_div.innerHTML = 'This cluster contains ' + a.layer.getAllChildMarkers().length + ' markers';
+                    });
+                    /*getAllChildMarkers: Returns the array of total markers contained within that cluster.
+                      getChildCount: Returns the total number of markers contained within that cluster.
+                    */
+                    markerClusters.on('clustermouseover', function (a) {
+                        event_div.innerHTML = 'This cluster contains ' + a.layer.getAllChildMarkers().length + ' markers; click to view the markers';
+                    });
+                    return markers
+                }, 2000)
+
             }
             // setTimeout(function () {
             //     displayingClusterOne(data)
             // }, 5000)
             // setTimeout(function () {
-                displayRandCluster()
             // }, 5000)
             function displayingClusterOne(data) {
 
                 var counter = 0;
                 data.forEach(function (d) {
                     if (d.cluster == 1) {
-                        mark[counter] = {zlat: Number(d.lat),lon:  Number(d.lon)}
+                        mark[counter] = {lat: Number(d.lat),lon:  Number(d.lon)}
                         counter++;
                     }
                 })
@@ -106,11 +106,10 @@ $(document).ready(function () {
                 var arrSize = 15
                 for (i = 0; i < 8; i++) {
                     randCluster[i] = mark[parseInt(Math.random() * 1000 % arrSize)]
-                    debugger
                 }
                 window.randCluster = randCluster
-                // displayingClusters(randCluster)
-
+                displayingClusters(randCluster)
+                drawRand()
             }
         };
 
@@ -198,5 +197,54 @@ $(document).ready(function () {
         }
 
 
+        function decode(encoded){
+            // array that holds the points
+            var points=[ ]
+            var index = 0, len = encoded.length;
+            var lat = 0, lng = 0;
+            while (index < len) {
+                var b, shift = 0, result = 0;
+                do {
+
+                    b = encoded.charAt(index++).charCodeAt(0) - 63;//finds ascii                                                                                    //and substract it by 63
+                    result |= (b & 0x1f) << shift;
+                    shift += 5;
+                } while (b >= 0x20);
+
+
+                var dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
+                lat += dlat;
+                shift = 0;
+                result = 0;
+                do {
+                    b = encoded.charAt(index++).charCodeAt(0) - 63;
+                    result |= (b & 0x1f) << shift;
+                    shift += 5;
+                } while (b >= 0x20);
+                var dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
+                lng += dlng;
+
+                points.push(new L.latLng(( lat / 1E5),( lng / 1E5)))
+
+            }
+            return points
+        }
+        function drawRand() {
+            for (i = 1; i < 9; i++) {
+                $.get(`http://apis.mapmyindia.com/advancedmaps/v1/mldh84igi6rmvoasak24zk51rzv1h8g3/route?start=${randCluster[i - 1].lat},${randCluster[i - 1].lon}&destination=${randCluster[i % 8].lat},${randCluster[i % 8].lon}&alternatives=true&with_advices=1`, function (d) {
+                    window.plotLine = d;
+                    pts = decode(plotLine.results.trips[0].pts);
+
+                    /*parameters of polyline*/
+                    var poly1param = {
+                        weight: 4,
+                        opacity: 0.5
+                    };
+                    var poly1 = new L.Polyline(pts, poly1param);
+                    /*polyline with given points and default color is created*/
+                    map.addLayer(poly1);
+                });
+            }
+        }
     };
 });
