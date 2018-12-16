@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04970de8-2a00-4d25-b26e-e517791a72f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redLightAutomationWithGUI/README.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,6 +38,7 @@
           <entry key="jpg" value="1" />
           <entry key="js" value="34" />
           <entry key="json" value="6" />
+          <entry key="md" value="1" />
           <entry key="png" value="14" />
           <entry key="py" value="11" />
           <entry key="txt" value="1" />
@@ -56,6 +54,7 @@
           <entry key="Image" value="16" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="34" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="2" />
         </counts>
@@ -67,6 +66,7 @@
           <entry key="gitignore" value="10" />
           <entry key="html" value="125" />
           <entry key="js" value="1936" />
+          <entry key="md" value="178" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -75,6 +75,7 @@
           <entry key="EJS" value="7" />
           <entry key="HTML" value="125" />
           <entry key="JavaScript" value="1936" />
+          <entry key="Markdown" value="178" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -85,8 +86,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            <state relative-caret-position="275">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="325">
+                <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -101,19 +114,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AntiTheftAI/images/car28.bmp">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartTrafficRouting/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="311">
+              <caret line="377" selection-start-line="377" selection-end-line="377" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redLightAutomationWithGUI/mainFlowChart.JPG">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-35">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -200,6 +223,7 @@
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -235,20 +259,22 @@
             <path>
               <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
               <item name="mshacks" type="462c0819:PsiDirectoryNode" />
-              <item name="smartTrafficRouting" type="462c0819:PsiDirectoryNode" />
+              <item name="AntiTheftAI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mshacks" type="462c0819:PsiDirectoryNode" />
+              <item name="redLightAutomationWithGUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
               <item name="mshacks" type="462c0819:PsiDirectoryNode" />
               <item name="smartTrafficRouting" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
               <item name="mshacks" type="462c0819:PsiDirectoryNode" />
-              <item name="smartTrafficRouting" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="mmyClusters" type="462c0819:PsiDirectoryNode" />
+              <item name="trafficAiApi" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,12 +332,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33278000" />
+    <option name="totallyTimeSpent" value="33807000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="69" y="0" width="1371" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22128259" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2325926" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,7 +350,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32923833" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" visible="true" weight="0.33046684" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" visible="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.31941032" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -337,7 +364,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trafficAiApi/node_modules/mongodb/lib/url_parser.js" />
     <entry file="file://$PROJECT_DIR$/trafficAiApi/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -552,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="275">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -566,20 +592,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smartTrafficRouting/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="311">
+          <caret line="377" selection-start-line="377" selection-end-line="377" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-35">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="325">
+            <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
