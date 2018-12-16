@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="04970de8-2a00-4d25-b26e-e517791a72f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js" beforeDir="false" afterPath="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +39,7 @@
           <entry key="html" value="4" />
           <entry key="ipynb" value="2" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="33" />
+          <entry key="js" value="34" />
           <entry key="json" value="6" />
           <entry key="png" value="14" />
           <entry key="py" value="11" />
@@ -50,26 +55,26 @@
           <entry key="HTML" value="4" />
           <entry key="Image" value="16" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="33" />
+          <entry key="JavaScript" value="34" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="43" />
+          <entry key="css" value="44" />
           <entry key="ejs" value="7" />
           <entry key="gitignore" value="10" />
-          <entry key="html" value="123" />
-          <entry key="js" value="1740" />
+          <entry key="html" value="125" />
+          <entry key="js" value="1936" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="43" />
+          <entry key="CSS" value="44" />
           <entry key="EJS" value="7" />
-          <entry key="HTML" value="123" />
-          <entry key="JavaScript" value="1740" />
+          <entry key="HTML" value="125" />
+          <entry key="JavaScript" value="1936" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -78,22 +83,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html">
+        <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-              <folding>
-                <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="206">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/smartTrafficRouting/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js">
+        <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="244" column="40" lean-forward="true" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="40" />
+            <state relative-caret-position="-35">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,12 +135,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&lt;&lt;&lt;&lt;</find>
-      <find>5000</find>
-      <find>cat</find>
-      <find>density</find>
-      <find>mongoose</find>
-      <find>newbin</find>
       <find>key=AI</find>
       <find>var</find>
       <find>latitudeArr</find>
@@ -124,14 +143,12 @@
       <find>clus</find>
       <find>predictedclusters</find>
       <find>clusters</find>
-      <find>console</find>
       <find>cluster</find>
       <find>/clus</find>
       <find>getPredi</find>
       <find>key=</find>
       <find>zlat</find>
       <find>map</find>
-      <find>center</find>
       <find>100</find>
       <find>clear</find>
       <find>debu</find>
@@ -140,6 +157,14 @@
       <find>rand</find>
       <find>polyline</find>
       <find>$</find>
+      <find>center</find>
+      <find>view</find>
+      <find>console</find>
+      <find>#result</find>
+      <find>click</find>
+      <find>result</find>
+      <find>path</find>
+      <find>static</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -171,8 +196,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/routing.ejs" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/predictedClusters.ejs" />
-        <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/app.js" />
+        <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html" />
         <option value="$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js" />
       </list>
@@ -200,28 +225,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ms2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ms2" type="462c0819:PsiDirectoryNode" />
+              <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mshacks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ms2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ms2" type="462c0819:PsiDirectoryNode" />
+              <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mshacks" type="462c0819:PsiDirectoryNode" />
               <item name="smartTrafficRouting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ms2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ms2" type="462c0819:PsiDirectoryNode" />
+              <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mshacks" type="462c0819:PsiDirectoryNode" />
               <item name="smartTrafficRouting" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ms2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ms2" type="462c0819:PsiDirectoryNode" />
+              <item name="mshacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mshacks" type="462c0819:PsiDirectoryNode" />
               <item name="smartTrafficRouting" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="mmyClusters" type="462c0819:PsiDirectoryNode" />
@@ -230,6 +254,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,13 +306,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31708000" />
+    <option name="totallyTimeSpent" value="33278000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22128259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -299,7 +323,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32923833" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" weight="0.33054394" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49964765" visible="true" weight="0.33046684" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003524" side_tool="true" weight="0.31941032" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -526,34 +550,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/smartTrafficRouting/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4950">
-          <caret line="366" lean-forward="true" selection-start-line="366" selection-end-line="366" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="206">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/mapClusters.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="244" column="40" lean-forward="true" selection-start-line="244" selection-start-column="20" selection-end-line="244" selection-end-column="40" />
+        <state relative-caret-position="276">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartTrafficRouting/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smartTrafficRouting/views/mmyClusters/touring.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

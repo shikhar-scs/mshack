@@ -257,5 +257,10 @@ $(document).ready(function () {
             var poly1 = new L.Polyline(randCluster, poly1param);
             map.addLayer(poly1);
         }
+        setTimeout(function () {
+            let a = document.getElementsByClassName("mapmyindia_path")[0]
+            a.click()
+        }, 5000)
+
     };
 });

@@ -13,7 +13,7 @@ body {
 
 #map-container {
     position: absolute;
-    left: 312px;
+    left: 0px;
     top: 46px;
     right: 2px;
     bottom: 2px;

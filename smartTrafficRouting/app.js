@@ -10,7 +10,11 @@ const express                = require('express'),
     binRequest               = require('./models/binRequest'),
     pickupSchedule           = require('./models/pickupSchedule'),
     complaint                = require('./models/complaint'),
-    predictedClusters        = require('./models/predictedClusters');
+    predictedClusters        = require('./models/predictedClusters'),
+    path                     = require('path'),
+     cors = require('cors');
+
+
 
 
 
@@ -31,7 +35,9 @@ var app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(cors())
 
+app.use(express.static(path.join(__dirname,'views/mmyClusters')));
 
 app.use(require("express-session")({
     secret: "Please work this time",
@@ -362,7 +368,9 @@ app.get('/seeroutes', function(req, res){
     res.render('routing');
 })
 
-
+app.get('/clustermap', function (req, res) {
+    res.sendFile(path.join(__dirname, 'views/mmyClusters/touring.html'))
+})
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var port = process.env.PORT || 3000;
